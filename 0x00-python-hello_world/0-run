@@ -1,0 +1,2 @@
+#!/bin/bash
+printenv PYFILE | chmod u+x main.py | ./main.py
