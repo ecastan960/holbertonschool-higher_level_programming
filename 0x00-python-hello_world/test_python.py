@@ -1,4 +1,5 @@
 if True:
-	print("Holbe")
+    print("Holbe")
 else:
-	print("Schl")
+    print("Schools")
+
