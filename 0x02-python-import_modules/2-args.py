@@ -6,7 +6,7 @@ if number == 0:
 else:
     if number == 1:
         print("1 argument:")
-        print("1: {}".format(sys.argv[number]))
+        print("1: {}:".format(sys.argv[number]))
     if number > 1:
         print("{} arguments".format(number))
         for x in range(number):
