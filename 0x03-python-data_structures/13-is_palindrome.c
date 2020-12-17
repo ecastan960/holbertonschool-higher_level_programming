@@ -12,9 +12,7 @@ int is_palindrome(listint_t **head)
 	if (*head == NULL)
 		return (1);
 	while (tail->next != NULL)
-	{
 		tail = tail->next;
-	}
 	while (t_h->next != tail && t_h != tail)
 	{
 		aux = *head;
@@ -26,9 +24,7 @@ int is_palindrome(listint_t **head)
 			tail = aux;
 		}
 		else
-		{
 			return (0);
-		}
 	}
 	return (1);
 }
