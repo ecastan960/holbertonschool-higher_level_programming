@@ -51,11 +51,15 @@ class Square:
             raise ValueError("size must be >= 0")
 
     def my_print(self):
-        """Method prints a square of define size"""
-        for l1 in range(self.__size):
-            for l2 in range(self.__size):
-                print("#", end='')
+        """Method prints a square of define size
+        """
+        if self.__size == 0:
             print()
+        else:
+            for l1 in range(self.__size):
+                for l2 in range(self.__size):
+                    print("#", end='')
+                print()
 
     def area(self):
         """Method to define a square
