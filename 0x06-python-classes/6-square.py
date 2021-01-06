@@ -9,8 +9,8 @@ class Square:
         """Initialization of the class
 
         Args:
-            size(int) the size of the square
-            position (tuple) tuple of int for position of square
+            size (int): the size of the square
+            position (tuple): tuple of int for position of square
 
         Raises:
             TypeError: size input its not an integer
@@ -48,7 +48,7 @@ class Square:
         """Set the value of size in a property
 
         Args:
-            value(int) the size of the square
+            value (int): the size of the square
 
         Raises:
             TypeError: size input its not an integer
@@ -92,8 +92,8 @@ class Square:
             self.__position = value
 
     def my_print(self):
-        """Method prints a square of define size
-        """
+        """Method prints a square of define size"""
+
         if self.__size == 0:
             print()
         else:
