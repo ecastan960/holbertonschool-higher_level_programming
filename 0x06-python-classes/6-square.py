@@ -29,7 +29,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(position[1]) != int or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(position) < 2 or len(position) > 2:
+        elif len(position) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(position) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -86,7 +86,7 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value[1]) != int or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) < 2 or len(value) > 2:
+        elif len(value) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
