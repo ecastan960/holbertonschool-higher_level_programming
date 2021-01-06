@@ -101,7 +101,7 @@ class Square:
                     print()
             for l1 in range(self.__size):
                 for l3 in range(self.__position[0]):
-                    print("_", end='')
+                    print(" ", end='')
                 for l2 in range(self.__size):
                     print("#", end='')
                 print()
