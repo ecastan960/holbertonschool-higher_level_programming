@@ -17,8 +17,8 @@ class Square:
             ValueError: size input its less than zero
             TypeError: position must be a tuple of 2 positive integers
         """
-            self.__size = size
-            self.__position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
