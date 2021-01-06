@@ -17,23 +17,7 @@ class Square:
             ValueError: size input its less than zero
             TypeError: position must be a tuple of 2 positive integers
         """
-
-        if type(size) == int and size >= 0:
             self.__size = size
-        elif type(size) != int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-
-        if type(position[0]) != int or position[0] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(position[1]) != int or position[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(position) is not 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif type(position) != tuple:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
             self.__position = position
 
     @property
