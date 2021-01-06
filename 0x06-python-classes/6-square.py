@@ -64,6 +64,7 @@ class Square:
     @property
     def position(self):
         """private definition of property position
+
         Return:
             Returns position of the square
         """
@@ -108,6 +109,7 @@ class Square:
 
     def area(self):
         """Method to define a square
+
         Return:
             Returns the square value of the square
         """
