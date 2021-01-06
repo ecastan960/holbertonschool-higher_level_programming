@@ -10,8 +10,7 @@ class Square:
 
         Args:
             size(int) the size of the square
-            position(int,int) tuple of int for
-            position of square
+            position (tuple) tuple of int for position of square
 
         Raises:
             TypeError: size input its not an integer
@@ -21,11 +20,12 @@ class Square:
 
         if type(size) == int and size >= 0:
             self.__size = size
-        if type(size) != int:
+        elif type(size) != int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
-        elif type(position[0]) != int or position[0] < 0:
+
+        if type(position[0]) != int or position[0] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(position[1]) != int or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
