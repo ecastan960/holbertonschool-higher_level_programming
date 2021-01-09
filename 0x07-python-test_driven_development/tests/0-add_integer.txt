@@ -1,1 +1,84 @@
+Add_integer.py test file
+========================
 
+Using 0-add_integer module
+--------------------------
+
+To use the module, the first step its to import the module as the following shows:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+To check and access the documentation for the module and the functions
+----------------------------------------------------------------------
+
+    >>> module_doc = __import__("0-add_integer").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> functions_doc = __import__("0-add_integer").add_integer.__doc__
+    >>> print(len(functions_doc) > 0)
+    True
+
+Integers checks
+===============
+``add_integer receives two integers and adds them. The following add_integer
+integers checks
+::
+
+    >>> add_integer(10,10)
+    20
+
+    >>> add_integer(0)
+    98
+
+    >>> add_integer(-98,10)
+    -88
+
+    >>> add_integer(0,-10)
+    -10
+
+Floats checks
+===============
+``add_integer can receive float numbers, but they are convert to integer before the 
+operation
+::
+
+    >>> add_integer(10.5,10)
+    20
+    
+    >>> add_integer(-10.8,10)
+    0
+    
+    >>> add_integer(-10.1)
+    88
+
+    >>> add_integer(-10.1,-10.1)
+    -20
+
+Type errors checks
+===============
+``If data different than integers or floats, the program must rise a type error.
+::
+    >>> add_integer("string",10)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(10,"string")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+    
+    >>> add_integer((1,2),10)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    
+    >>> add_integer([1,2],10)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    
+    >>> add_integer(float("inf"),0)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
