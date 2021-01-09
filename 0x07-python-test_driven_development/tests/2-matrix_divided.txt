@@ -62,14 +62,3 @@ Type errors checks
     Traceback (most recent call last):
     TypeError: div must be a number
     
-    >>> add_integer([1,2],10)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-    
-    >>> add_integer(None)
-    Traceback (most recent call last):
-    TypeError: a must be an integer
-    
-    >>> add_integer(float("inf"),0)
-    Traceback (most recent call last):
-    OverflowError: cannot convert float infinity to integer
