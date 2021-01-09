@@ -1,0 +1,75 @@
+2-matrix_divided.py test file
+========================
+
+Using 2-matrix_divided module
+--------------------------
+
+To use the module, the first step its to import the module as the following shows:
+
+    >>> add_integer = __import__('2-matrix_divided').matrix_divided
+    >>> matrix = [[1, 2, 3],[4, 5, 6]]
+
+To check and access the documentation for the module and the functions
+----------------------------------------------------------------------
+
+    >>> module_doc = __import__("2-matrix_divided").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> functions_doc = __import__("2-matrix_divided").matrix_divided.__doc__
+    >>> print(len(functions_doc) > 0)
+    True
+
+Integers checks
+===============
+``add_integer receives two integers and adds them. The following add_integer
+integers checks
+::
+
+    >>> matrix_divided(matrix,3)
+    [[0.0, 0.33, 0.33], [0.33, 0.67, 0.67]]
+
+    >>> matrix_divided(matrix,-3)
+    [[-0.0, -0.11, -0.11], [-0.11, -0.22, -0.22]]
+
+
+Floats checks
+===============
+``add_integer can receive float numbers, but they are convert to integer before the 
+operation
+::
+
+    >>> matrix_divided(matrix, 3.5)
+    [[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
+    
+    >>> matrix_divided(matrix, 3.5)
+    [[-0.29, -0.57, -0.86], [-1.14, -1.43, -1.71]]
+
+
+Type errors checks
+===============
+``If data different than integers or floats, the program must rise a type error.
+::
+    >>> matrix_divided("string",10)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+    >>> matrix_divided(matrix,0)
+    Traceback (most recent call last):
+    ZeroDivisionError: division by zero
+    
+    >>> matrix_divided(matrix,"string")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+    
+    >>> add_integer([1,2],10)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    
+    >>> add_integer(float("inf"),0)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
