@@ -122,7 +122,7 @@ class Rectangle:
 
         Returns:
             [type]: [description]
-        """        
+        """
         string = []
         string.append("Rectangle(")
         string.append(str(self.__width))
