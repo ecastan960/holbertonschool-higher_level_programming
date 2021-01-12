@@ -140,3 +140,41 @@ class Rectangle:
         """
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
+
+    def bigger_or_equal(rect_1, rect_2):
+        """[summary]
+
+        Args:
+            rect_1 ([type]): [description]
+            rect_2 ([type]): [description]
+
+        Returns:
+            [type]: [description]
+            [type]: [description]
+        """
+
+        if type(rect_1) != Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) != Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        area_rect1 = rect_1.__width * rect_1.__height
+        area_rect2 = rect_2.__width * rect_2.__height
+
+        if area_rect1 > area_rect2:
+            return rect_1
+        elif area_rect1 == area_rect2:
+            return rect_1
+        else:
+            return rect_2
+    
+    @classmethod
+    def square(cls, size=0):
+        """[summary]
+
+        Args:
+            size (int, optional): [description]. Defaults to 0.
+
+        Returns:
+            [type]: [description]
+        """
+        return cls(size, size)
