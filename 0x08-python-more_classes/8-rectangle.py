@@ -140,3 +140,15 @@ class Rectangle:
         """
         Rectangle.number_of_instances = Rectangle.number_of_instances - 1
         print("Bye rectangle...")
+
+    def bigger_or_equal(rect_1, rect_2):
+        if type(rect_1) != Rectangle:
+            raise ("rect_1 must be an instance of Rectangle")
+        if type(rect_2) != Rectangle:
+            raise ("rect_2 must be an instance of Rectangle")
+        area_rect1 = rect_1.__width * rect_1.__height
+        area_rect2 = rect_2.__width * rect_2.__height
+        if area_rect1 > area_rect2:
+            return rect_1
+        else:
+            return rect_2
