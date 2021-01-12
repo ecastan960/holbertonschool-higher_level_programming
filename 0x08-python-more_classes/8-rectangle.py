@@ -151,5 +151,7 @@ class Rectangle:
         area_rect2 = rect_2.__width * rect_2.__height
         if area_rect1 > area_rect2:
             return rect_1
+        elif area_rect1 == area_rect2:
+            return rect_1
         else:
             return rect_2
