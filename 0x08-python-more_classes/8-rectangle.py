@@ -152,12 +152,14 @@ class Rectangle:
         Returns:
             [type]: [description]
         """
+
         if type(rect_1) != Rectangle:
             raise ("rect_1 must be an instance of Rectangle")
         if type(rect_2) != Rectangle:
             raise ("rect_2 must be an instance of Rectangle")
         area_rect1 = rect_1.__width * rect_1.__height
         area_rect2 = rect_2.__width * rect_2.__height
+
         if area_rect1 > area_rect2:
             return rect_1
         elif area_rect1 == area_rect2:
