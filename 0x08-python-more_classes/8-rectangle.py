@@ -151,6 +151,7 @@ class Rectangle:
 
         Returns:
             [type]: [description]
+            [type]: [description]
         """
 
         if type(rect_1) != Rectangle:
