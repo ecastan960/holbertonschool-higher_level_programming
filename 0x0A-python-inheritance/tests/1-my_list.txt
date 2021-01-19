@@ -1,0 +1,30 @@
+my_list.py test file
+========================
+
+Using 1-my_list module
+--------------------------
+
+To use the module, the first step its to import the module as the following shows:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+To check and access the documentation for the module and the functions
+----------------------------------------------------------------------
+
+    >>> module_doc = __import__("1-my_list").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> functions_doc = __import__("1-my_list").MyList.__doc__
+    >>> print(len(functions_doc) > 0)
+    True
+
+List checks
+===============
+``my_list receives a list with integers and print the list sorted
+::
+
+    >>> my_list = MyList([4 ,55, 61, 8, 97])
+    >>> my_list.print_sorted()
+    [4 ,8, 55, 61, 97]
+
