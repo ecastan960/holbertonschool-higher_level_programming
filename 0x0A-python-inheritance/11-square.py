@@ -88,7 +88,7 @@ class Square(Rectangle):
             [type]: [description]
         """
         return self.__size * self.__size
-    
+
     def __str__(self):
         """[summary]
         """
