@@ -14,7 +14,6 @@ class BaseGeometry:
         """
         raise Exception("area() is not implemented")
 
-
     def integer_validator(self, name, value):
         """[summary]
 
@@ -31,7 +30,13 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError("<name> must be greater than 0")
 
+
 class Rectangle(BaseGeometry):
+    """[summary]
+
+    Args:
+        BaseGeometry ([type]): [description]
+    """
 
     def __init__(self, width, height):
         """[summary]
