@@ -3,6 +3,7 @@
 """
 import json
 
+
 def save_to_json_file(my_obj, filename):
     """[summary]
 
@@ -12,5 +13,5 @@ def save_to_json_file(my_obj, filename):
     """
 
     with open(filename, mode='w', encoding='utf-8') as f:
-        json_object = json.dumps(my_obj) 
+        json_object = json.dumps(my_obj)
         f.write(json_object)
