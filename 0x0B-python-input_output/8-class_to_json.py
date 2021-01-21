@@ -5,12 +5,14 @@ import json
 
 
 def class_to_json(obj):
-    """[summary]
+    """returns the dictionary description with simple data structure
+    (list, dictionary, string, integer and boolean) for JSON
+    serialization of an object:
 
     Args:
-        obj ([type]): [description]
+        obj (obj): [description]
 
     Returns:
-        [type]: [description]
+        [type]: Dictionary description
     """
     return obj.__dict__
