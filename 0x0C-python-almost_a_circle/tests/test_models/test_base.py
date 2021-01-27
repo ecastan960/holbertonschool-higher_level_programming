@@ -42,3 +42,11 @@ class testBase(unittest.TestCase):
     def test_doc_load_from_file(self):
 
         self.assertTrue(len(Base.load_from_file.__doc__) > 0)
+
+    def test_id(self):
+        test = Base()
+        self.assertEqual(test.id, 1)
+        test = Base()
+        self.assertEqual(test.id, 2)
+        test = Base(12)
+        self.assertEqual(test.id, 12)

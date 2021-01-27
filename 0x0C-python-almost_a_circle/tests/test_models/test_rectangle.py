@@ -58,3 +58,7 @@ class testBase(unittest.TestCase):
     def test_doc_to_dictionary(self):
 
         self.assertTrue(len(Rectangle.to_dictionary.__doc__) > 0)
+
+    def test_attr(self):
+        r1 = Rectangle(10, 2)
+        
