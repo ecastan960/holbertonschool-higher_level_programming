@@ -14,9 +14,22 @@ class Square(Rectangle):
         Rectangle ([type]): [description]
     """
     def __init__(self, size, x=0, y=0, id=None):
+        """[summary]
+
+        Args:
+            size ([type]): [description]
+            x (int, optional): [description]. Defaults to 0.
+            y (int, optional): [description]. Defaults to 0.
+            id ([type], optional): [description]. Defaults to None.
+        """
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        """[summary]
+
+        Returns:
+            [type]: [description]
+        """
         return '[Square] ({}) {}/{} - {}'.format(self.id,
                                                  self.x, self.y,
                                                  self.width)
@@ -27,7 +40,7 @@ class Square(Rectangle):
 
         Returns:
             [type]: [description]
-        """   
+        """
         return self.width
 
     @size.setter
