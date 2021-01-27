@@ -3,7 +3,7 @@
 """
 
 import unittest
-import models.base
+from models import base
 from models.base import Base
 # from models.rectangle import Rectangle
 # from models.square import Square
