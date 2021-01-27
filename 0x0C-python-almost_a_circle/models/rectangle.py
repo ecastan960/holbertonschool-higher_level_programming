@@ -51,27 +51,10 @@ class Rectangle(Base):
             ValueError: [description]
             ValueError: [description]
         """
-
-        if type(width) is not int:
-            raise TypeError("width must be and integer")
-        if type(height) is not int:
-            raise TypeError("height must be and integer")
-        if width <= 0:
-            raise ValueError("width must be > 0")
-        if height <= 0:
-            raise ValueError("height must be > 0")
-        if type(x) is not int:
-            raise ValueError("x must be and integer")
-        if x < 0:
-            raise TypeError("x must be >= 0")
-        if type(y) is not int:
-            raise ValueError("y must be and integer")
-        if y < 0:
-            raise ValueError("y must be >= 0")
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         if id is not None:
             self.id = id
         else:
