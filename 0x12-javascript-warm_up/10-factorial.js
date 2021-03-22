@@ -1,14 +1,15 @@
 #!/usr/bin/node
 const n = process.argv[2];
-if (process.argv[2]) {
-  function factorial (n) {
-    if (n <= 1) {
-      return 1;
-    } else {
-      return n * factorial(n - 1);
-    }
+
+function factorial (n) {
+  if (n <= 1) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
   }
+}
+if (parseInt(n)) {
   console.log(factorial(n));
-} else {
+} else if (isNaN(n)) {
   console.log(1);
 }
