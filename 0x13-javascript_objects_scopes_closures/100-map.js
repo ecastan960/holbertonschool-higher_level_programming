@@ -1,8 +1,6 @@
 #!/usr/bin/node
 const list1 = require('./100-data').list;
-const list2 = [];
+
+const map1 = list1.map((item, index, list1) => item * index);
 console.log(list1);
-for (let i = 0; i < list1.length; i++) {
-  list2[i] = list1[i] * i;
-}
-console.log(list2);
+console.log(map1);
