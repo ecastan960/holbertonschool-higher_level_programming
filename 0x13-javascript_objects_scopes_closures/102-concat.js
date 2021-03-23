@@ -9,7 +9,7 @@ fs.readFile(fileA, (err, data) => {
   if (err) throw err;
 
   const file1 = data.toString();
-  fs.appendFile(fileC, file1, (err) => {
+  fs.appendFile(fileC, `${file1}\n`, (err) => {
     if (err) throw err;
   });
 });
@@ -18,7 +18,7 @@ fs.readFile(fileB, (err, data) => {
   if (err) throw err;
 
   const file2 = data.toString();
-  fs.appendFile(fileC, `\n${file2}`, (err) => {
+  fs.appendFile(fileC, `${file2}`, (err) => {
     if (err) throw err;
   });
 });
