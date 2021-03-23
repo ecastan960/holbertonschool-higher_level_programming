@@ -5,20 +5,11 @@ const fileA = process.argv[2];
 const fileB = process.argv[3];
 const fileC = process.argv[4];
 
-fs.readFile(fileA, (err, data) => {
-  if (err) throw err;
-
-  const file1 = data.toString();
-  fs.appendFile(fileC, `${file1}\n`, (err) => {
-    if (err) throw err;
-  });
-});
-
-fs.readFile(fileB, (err, data) => {
-  if (err) throw err;
-
-  const file2 = data.toString();
-  fs.appendFile(fileC, `${file2}`, (err) => {
-    if (err) throw err;
-  });
-});
+try {
+  const data1 = fs.readFileSync(fileA, 'utf8')
+  const data2 = fs.readFileSync(fileB, 'utf8')
+  const text = `${data1}\n${data2}`;
+  const data3 = fs.writeFileSync(fileC, text);
+} catch (err) {
+  console.error(err)
+}
