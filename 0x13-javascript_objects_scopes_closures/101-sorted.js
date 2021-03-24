@@ -2,7 +2,7 @@
 const data = require('./101-data').dict;
 const newDict = {};
 for (const key in data) {
-  if (!newDict[data[key]]){
+  if (!newDict[data[key]]) {
     newDict[data[key]] = [];
   }
   newDict[data[key]].push(key);
