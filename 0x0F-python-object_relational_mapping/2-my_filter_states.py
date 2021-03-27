@@ -21,6 +21,7 @@ if __name__ == '__main__':
     rows = c.fetchall()
 
     for eachRow in rows:
-        print(eachRow)
+        if eachRow[1] == state_name:
+            print(eachRow)
     c.close()
     conn.close()
