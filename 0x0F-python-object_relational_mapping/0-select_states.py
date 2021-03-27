@@ -10,7 +10,8 @@ password = argv[2]
 d_name = argv[3]
 
 if __name__ == '__main__':
-    """This code its not executed if imported
+    """
+    This code its not executed if imported
     """
     conn = MySQLdb.connect(host="localhost", port=3306,
                            user=username, passwd=password, db=d_name,
