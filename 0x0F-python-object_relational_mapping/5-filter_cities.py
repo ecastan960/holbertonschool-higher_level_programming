@@ -17,7 +17,8 @@ if __name__ == '__main__':
                            user=username, passwd=password, db=d_name)
     c = conn.cursor()
     query = "SELECT cities.name FROM cities INNER JOIN states ON \
-             cities.state_id=states.id WHERE states.name = %(state_name)s "
+             cities.state_id=states.id WHERE states.name = %(state_name)s\
+             ORDER BY cities.id ASC"
     c.execute(query, {'state_name': state_name})
     rows = c.fetchall()
     count = 0
