@@ -9,13 +9,12 @@ from sqlalchemy.orm import Session
 from sqlalchemy import Column, Integer, String
 from sqlalchemy import delete
 
-username = argv[1]
-password = argv[2]
-d_name = argv[3]
-
 if __name__ == '__main__':
     """This code its not executed if imported
     """
+    username = argv[1]
+    password = argv[2]
+    d_name = argv[3]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(username, password, d_name),
                            pool_pre_ping=True)
