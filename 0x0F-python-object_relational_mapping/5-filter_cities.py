@@ -6,14 +6,13 @@ against MySQL injections
 import MySQLdb
 from sys import argv
 
-username = argv[1]
-password = argv[2]
-d_name = argv[3]
-state_name = argv[4]
-
 if __name__ == '__main__':
     """This code its not executed if imported
     """
+    username = argv[1]
+    password = argv[2]
+    d_name = argv[3]
+    state_name = argv[4]
     conn = MySQLdb.connect(host="localhost", port=3306,
                            user=username, passwd=password, db=d_name)
     c = conn.cursor()
@@ -29,3 +28,5 @@ if __name__ == '__main__':
         else:
             print('{}'.format(eachRow[0]))
         count += 1
+    c.close()
+    conn.close()
