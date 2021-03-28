@@ -23,12 +23,10 @@ if __name__ == '__main__':
     c.execute(query, (state_name,))
     rows = c.fetchall()
     count = 0
+    l_cities = []
 
     for eachRow in rows:
-        if len(rows) - 1 > count:
-            print('{}, '.format(eachRow[1]), end="")
-        else:
-            print('{}'.format(eachRow[1]))
-        count += 1
+        l_cities.append(eachRow[1])
+    print(', '.join(l_cities))
     c.close()
     conn.close()
