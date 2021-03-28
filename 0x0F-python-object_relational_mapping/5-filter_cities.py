@@ -20,7 +20,6 @@ if __name__ == '__main__':
              cities.state_id=states.id WHERE states.name = %(state_name)s "
     c.execute(query, {'state_name': state_name})
     rows = c.fetchall()
-    count = 0
     l_cities = []
 
     for eachRow in rows:
