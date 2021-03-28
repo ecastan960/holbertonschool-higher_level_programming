@@ -16,18 +16,19 @@ if __name__ == '__main__':
     conn = MySQLdb.connect(host="localhost", port=3306,
                            user=username, passwd=password, db=d_name)
     c = conn.cursor()
-    query = "SELECT cities.name FROM cities INNER JOIN states ON \
-             cities.state_id=states.id WHERE states.name = %(state_name)s\
-             ORDER BY cities.id ASC"
-    c.execute(query, {'state_name': state_name})
+    query = """SELECT cities.id, cities.name, states.name FROM cities \
+             INNER JOIN states ON \
+             cities.state_id=states.id WHERE states.name = %s \
+             ORDER BY cities.id ASC"""
+    c.execute(query, (state_name,))
     rows = c.fetchall()
     count = 0
 
     for eachRow in rows:
         if len(rows) - 1 > count:
-            print('{}, '.format(eachRow[0]), end="")
+            print('{}, '.format(eachRow[1]), end="")
         else:
-            print('{}'.format(eachRow[0]))
+            print('{}'.format(eachRow[1]))
         count += 1
     c.close()
     conn.close()
