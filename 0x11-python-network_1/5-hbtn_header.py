@@ -11,4 +11,5 @@ if __name__ == "__main__":
     """Don't execute if imported
     """
     r = requests.get(sys.argv[1])
-    print(r.headers['X-Request-Id'])
+    if 'X-Request-Id' in r.headers:
+        print(r.headers['X-Request-Id'])
