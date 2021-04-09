@@ -12,9 +12,6 @@ def find_peak(list_of_integers):
     Returns:
         [type]: Integer of at least one peak
     """
-    if not list_of_integers:
-        return None
-    else:
+    if list_of_integers:
         list_sorted = sorted(list_of_integers)
-        max_number = list_sorted[len(list_sorted) - 1]
-        return max_number
+        return list_sorted[-1]
