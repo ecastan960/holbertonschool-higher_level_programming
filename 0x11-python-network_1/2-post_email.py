@@ -11,10 +11,10 @@ if __name__ == "__main__":
     """Don't execute if imported
     """
     url = sys.argv[1]
-    email = sys.argv[2]
+    email = {'email': sys.argv[2]}
     data = parse.urlencode(email)
     data = data.encode('utf-8')
     req = request.Request(url, data)
     with request.urlopen(req) as response:
         html = response.read()
-        print(html)
+        print(html.decode('utf-8'))
