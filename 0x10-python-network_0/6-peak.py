@@ -13,5 +13,5 @@ def find_peak(list_of_integers):
         [type]: Integer of at least one peak
     """
     if list_of_integers:
-        list_sorted = sorted(list_of_integers)
-        return list_sorted[-1]
+        list_of_integers.sort()
+        return list_of_integers[-1]
