@@ -1,5 +1,6 @@
 #!/usr/bin/node
 const url = process.argv[2];
+const id = 18;
 const request = require('request');
 request(url, function (error, response, body) {
   if (error) {
@@ -10,7 +11,7 @@ request(url, function (error, response, body) {
   let count = 0;
   let n = 0;
   let r = 0;
-  const wedge = 'https://swapi-api.hbtn.io/api/people/18/';
+  const wedge = 'https://swapi-api.hbtn.io/api/people/' + id + '/';
   while (object.results[r]) {
     n = 0;
     while (object.results[r].characters[n]) {
