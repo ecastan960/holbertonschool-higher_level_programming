@@ -1,0 +1,25 @@
+#!/usr/bin/node
+const request = require('request');
+request('https://swapi-api.hbtn.io/api/films/', function (error, response, body) {
+  if (error) {
+    console.error('error:', error);
+  }
+  const object = JSON.parse(body);
+  // const number = object.keys()
+  let count = 0;
+  let n = 0;
+  let r = 0;
+  const wedge = 'https://swapi-api.hbtn.io/api/people/18/';
+  while (object.results[r]) {
+    n = 0;
+    while (object.results[r].characters[n]) {
+      if (object.results[r].characters[n] === wedge) {
+        count = count + 1;
+      }
+      n = n + 1;
+    }
+    r = r + 1;
+  }
+
+  console.log(count);
+});
