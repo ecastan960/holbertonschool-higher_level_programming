@@ -16,7 +16,7 @@ request(url, function (error, response, body) {
         count = count + 1;
       }
       n = n + 1;
-      if (typeof object[n] == 'undefined') {
+      if (typeof object[n] === 'undefined') {
         break;
       }
     }
