@@ -11,12 +11,7 @@ request(url, function (error, response, body) {
   }
   const object = JSON.parse(body);
   while (object[n]) {
-    console.log(object[n].userId);
-    console.log(user);
-    console.log(n);
-    console.log('--------------');
     while (object[n].userId === user) {
-      console.log('--------after');
       if (object[n].completed === true) {
         count = count + 1;
       }
